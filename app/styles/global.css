@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Oswald ExtraLight"),
+    url("fonts/Oswald-Regular.woff") format("woff");
+}
+
+.custom-animation-fade-in-up {
+  animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.custom-animation-fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  color: "#3f3f46";
+  font-family: "Oswald";
+}
+
+select {
+  color: lightblue;
+  background: transparent;
+}
+
+.flip {
+  perspective: 1600px;
+}
+.flip-content {
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.flip:hover .flip-content {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.richtext p {
+  margin-bottom: 20px;
+}
+
+.richtext p:last-child {
+  margin-bottom: 0;
+}
+
+.richtext b {
+  color: rgb(20 184 166);
+}
+
+.react-add-to-calendar {
+  margin: inherit;
+}
+
+.react-add-to-calendar a {
+  display: inline-block;
+}
