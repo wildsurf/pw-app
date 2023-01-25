@@ -9,6 +9,8 @@ type Props = {
       filename: string;
     };
     viewHeight: string;
+    bgColor?: string;
+    bgSize?: string;
   };
 };
 
@@ -31,8 +33,9 @@ export const Parallax: FC<Props> = ({
         style={{
           transform: "translateZ(-10px) scale(2)",
           backgroundImage: `url("${photo.filename}")`,
-          backgroundPosition: "top center",
-          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundSize: blok.bgSize ?? "cover",
+          backgroundColor: blok.bgColor ?? "transparent",
           backgroundRepeat: "no-repeat",
         }}
       />
